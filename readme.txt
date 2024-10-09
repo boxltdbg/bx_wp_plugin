@@ -16,6 +16,9 @@ BOX NOW Delivery is used for connecting e-shops with parcel delivery services fr
 
 == Changelog ==
 
+= 2.1.5 =
+* Added class category products excluding inside admin panel.
+
 = 2.1.3 =
 * Fixed iframe embedded map
 * Resolved problem with losing apm id on payment method change.
