@@ -285,7 +285,7 @@ function bndp_change_cod_title_for_box_now_delivery($title, $payment_id)
 
 /*
 * Send information to BOX NOW api and for sending an email to the customer with the voucher
-*/
+
 add_action('woocommerce_order_status_completed', 'boxnow_order_completed');
 
 function boxnow_order_completed($order_id)
@@ -324,6 +324,7 @@ function boxnow_order_completed($order_id)
     }
   }
 }
+*/
 
 // This is the delivery request only for the boxnow_order_completed function
 function boxnow_order_completed_delivery_request($prep_data, $order_id, $num_vouchers)
