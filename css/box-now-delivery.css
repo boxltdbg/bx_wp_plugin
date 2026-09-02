@@ -1,0 +1,441 @@
+/* BOX NOW Locker Selection Button - Classic Checkout */
+/* Theme-adaptive: no borders, blends with checkout styles */
+#box_now_delivery_button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 320px;
+  min-height: 44px;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border: none !important;
+  border-radius: 8px;
+  background-color: #84C33F;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  white-space: normal;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  /* Theme compatibility: inherit font family from checkout */
+  font-family: inherit;
+}
+
+#box_now_delivery_button:hover {
+  background-color: #6fa832;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+#box_now_delivery_button:active {
+  background-color: #5d9129;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+}
+
+#box_now_delivery_button:focus {
+  outline: 2px solid rgba(132, 195, 63, 0.5);
+  outline-offset: 2px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 480px) {
+  #box_now_delivery_button {
+    max-width: 100%;
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+}
+
+/* Print Voucher button in WooCommerce order page */
+.print-voucher-button {
+  background-color: #84C33F;
+  border: 2px solid #62a02c;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: all 0.3s;
+  border-radius: 10px;
+}
+
+.print-voucher-button:hover {
+  background-color: #62a02c;
+  border-color: #4d7e25;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  transform: translateY(2px);
+}
+
+.print-voucher-button:active {
+  background-color: #4d7e25;
+  border-color: #3c5e1d;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), inset 0 2px 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+}
+
+.box-now-link {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #84C33F;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  margin: 4px 0;
+}
+
+.box-now-link:hover {
+  background-color: #62a02c;
+  color: #ffffff;
+}
+
+/* BOX NOW Selected Locker Details - Classic Checkout */
+/* Theme-adaptive: no borders, subtle background, blends with checkout */
+.boxnow-selected-locker-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 12px 0;
+  padding: 14px 16px;
+  background: rgba(248, 255, 245, 0.6);
+  border: none !important;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  /* Theme compatibility: inherit from checkout container */
+  font-family: inherit;
+  /* Adaptive: works with light/dark themes */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.boxnow-selected-locker-info .boxnow-locker-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #166534;
+  margin-bottom: 2px;
+  /* Theme-adaptive: works with light/dark themes */
+  opacity: 0.8;
+}
+
+.boxnow-selected-locker-info .boxnow-locker-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.5;
+  /* Theme-adaptive: inherit color where appropriate */
+  color: inherit;
+}
+
+.boxnow-selected-locker-info .boxnow-locker-name strong {
+  font-weight: 700;
+  color: inherit;
+}
+
+.boxnow-selected-locker-info .boxnow-locker-address {
+  font-size: 13px;
+  color: #4b5563;
+  line-height: 1.5;
+  /* Theme-adaptive: slightly muted but readable */
+  opacity: 0.9;
+}
+
+.boxnow-selected-locker-info .boxnow-locker-address strong {
+  font-weight: 600;
+  color: inherit;
+}
+
+/* Shipping method container styling */
+.woocommerce-shipping-totals .shipping .boxnow-button-wrapper,
+.woocommerce-checkout .shipping .boxnow-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* Classic checkout: prevent label/price overlap across themes */
+.woocommerce-checkout #shipping_method li,
+.woocommerce-checkout ul.woocommerce-shipping-methods li,
+.woocommerce-checkout .woocommerce-shipping-methods li {
+  position: relative;
+}
+
+.woocommerce-checkout #shipping_method li label,
+.woocommerce-checkout ul.woocommerce-shipping-methods li label,
+.woocommerce-checkout .woocommerce-shipping-methods li label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  min-width: 0;
+  width: 100%;
+}
+
+.woocommerce-checkout #shipping_method li label .amount,
+.woocommerce-checkout ul.woocommerce-shipping-methods li label .amount,
+.woocommerce-checkout .woocommerce-shipping-methods li label .amount {
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.woocommerce-checkout #shipping_method li label,
+.woocommerce-checkout ul.woocommerce-shipping-methods li label {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Theme-adaptive: Remove borders from classic checkout option container */
+.boxnow-classic-option {
+  border: none !important;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin: 8px 0 10px;
+  background-color: transparent;
+  /* Adapt to theme background */
+  background: inherit;
+}
+
+/* Fix for various theme compatibility issues */
+.woocommerce-checkout #box_now_delivery_button,
+.wc-block-components-shipping-rates-control #box_now_delivery_button {
+  width: auto;
+  min-width: 200px;
+  max-width: 100%;
+  /* Remove any theme-applied borders */
+  border: none !important;
+  outline: none;
+}
+
+/* Theme-adaptive: Ensure button blends with different checkout styles */
+.woocommerce-checkout #box_now_delivery_button,
+.wc-block-components-checkout-step #box_now_delivery_button,
+.wc-block-checkout #box_now_delivery_button {
+  /* Inherit theme button styles where appropriate */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Dark theme compatibility */
+@media (prefers-color-scheme: dark) {
+  .boxnow-selected-locker-info {
+    background: rgba(30, 40, 50, 0.4);
+    color: inherit;
+  }
+  
+  .boxnow-selected-locker-info .boxnow-locker-label {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .boxnow-selected-locker-info .boxnow-locker-name,
+  .boxnow-selected-locker-info .boxnow-locker-address {
+    color: inherit;
+  }
+}
+
+/* Button visibility is controlled by JavaScript */
+/* These base styles apply when button is shown */
+#box_now_delivery_button {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Fix alignment in table-based checkout layouts */
+table.shop_table #box_now_delivery_button {
+  margin: 8px 0;
+}
+
+/* Block checkout container - consistent positioning */
+.boxnow-elements-container {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 0;
+}
+
+.boxnow-elements-container #box_now_delivery_button {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.boxnow-elements-container #box_now_selected_locker_details {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.boxnow-elements-container .boxnow-error-message {
+  margin-left: 0;
+  display: block;
+}
+
+/* Theme-specific overrides for better compatibility */
+/* WooCommerce Storefront theme */
+.theme-storefront .boxnow-selected-locker-info {
+  background: rgba(248, 255, 245, 0.5);
+}
+
+/* WooCommerce Flatsome theme */
+.theme-flatsome .boxnow-selected-locker-info {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* WooCommerce Astra theme */
+.theme-astra .boxnow-selected-locker-info {
+  background: rgba(248, 255, 245, 0.4);
+}
+
+/* WooCommerce Divi theme */
+.theme-Divi .boxnow-selected-locker-info {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Ensure button works in all WooCommerce checkout layouts */
+.woocommerce-checkout #box_now_delivery_button,
+.woocommerce-page #box_now_delivery_button,
+.wc-block-checkout #box_now_delivery_button {
+  /* Remove any conflicting styles */
+  border: none !important;
+  outline: none;
+  text-shadow: none;
+}
+
+/* Additional responsive improvements */
+@media (max-width: 768px) {
+  .boxnow-selected-locker-info {
+    padding: 12px 14px;
+    margin: 10px 0;
+  }
+  
+  #box_now_delivery_button {
+    width: 100%;
+    max-width: none;
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .boxnow-selected-locker-info {
+    padding: 10px 12px;
+    margin: 8px 0;
+    gap: 6px;
+  }
+  
+  .boxnow-selected-locker-info .boxnow-locker-label {
+    font-size: 10px;
+  }
+  
+  .boxnow-selected-locker-info .boxnow-locker-name {
+    font-size: 14px;
+  }
+  
+  .boxnow-selected-locker-info .boxnow-locker-address {
+    font-size: 12px;
+  }
+  
+  #box_now_delivery_button {
+    font-size: 13px;
+    padding: 10px 14px;
+    min-height: 40px;
+  }
+}
+
+/* Generate BOX NOW Voucher buttons - hierarchical sizes (Small < Medium < Large) */
+.box-now-compartment-size-buttons .box-now-voucher-btn {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.box-now-compartment-size-buttons .box-now-voucher-btn-small {
+  min-width: 160px;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.box-now-compartment-size-buttons .box-now-voucher-btn-medium {
+  min-width: 190px;
+  padding: 7px 14px;
+  font-size: 13px;
+}
+
+.box-now-compartment-size-buttons .box-now-voucher-btn-large {
+  min-width: 220px;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+/* Force BOX NOW locker info to always use light green background and readable text */
+.woocommerce-checkout .boxnow-selected-locker-info,
+.woocommerce-page .boxnow-selected-locker-info,
+.wc-block-checkout .boxnow-selected-locker-info {
+  background-color: #e6f7d9 !important;
+  color: #1f2937 !important;
+}
+
+.woocommerce-checkout .boxnow-selected-locker-info .boxnow-locker-label,
+.woocommerce-page .boxnow-selected-locker-info .boxnow-locker-label,
+.wc-block-checkout .boxnow-selected-locker-info .boxnow-locker-label {
+  color: #166534 !important;
+}
+
+.woocommerce-checkout .boxnow-selected-locker-info .boxnow-locker-name,
+.woocommerce-page .boxnow-selected-locker-info .boxnow-locker-name,
+.wc-block-checkout .boxnow-selected-locker-info .boxnow-locker-name,
+.woocommerce-checkout .boxnow-selected-locker-info .boxnow-locker-address,
+.woocommerce-page .boxnow-selected-locker-info .boxnow-locker-address,
+.wc-block-checkout .boxnow-selected-locker-info .boxnow-locker-address {
+  color: #1f2937 !important;
+}
+
+
+/* ── Popup iframe (fixed, centered over overlay) ───────────────────────── */
+.boxnow-popup-iframe {
+  border-radius: 0;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+}
+
+@media (max-width: 480px) {
+  .boxnow-popup-iframe {
+    width: calc(100vw - 32px);
+    height: calc(100vh - 80px);
+    border-radius: 12px;
+  }
+}
+
+/* ── Embedded iframe (inline in checkout page) ──────────────────────────── */
+.boxnow-embedded-iframe {
+  display: block;
+  height: clamp(380px, 55vh, 560px);
+}
+
+@media (max-width: 480px) {
+  .boxnow-embedded-iframe {
+    height: clamp(320px, 65vh, 480px);
+  }
+}
+
+/* Print styles - hide decorative elements */
+@media print {
+  .boxnow-selected-locker-info {
+    border: 1px solid #ccc !important;
+    background: #fff !important;
+    box-shadow: none !important;
+  }
+  
+  #box_now_delivery_button {
+    display: none !important;
+  }
+}
